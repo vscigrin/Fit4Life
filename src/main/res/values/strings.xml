@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FIT4LIFE</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_back">Назад</string>
+    <string name="action_home">На главную</string>
+
+    <!-- Main menu TextView texts -->
+    <string name="title_activity_tables">Таблицы</string>
+    <string name="title_activity_video">Видеовыпуски</string>
+    <string name="title_activity_underground">Подполье</string>
+    <string name="title_activity_diary">Дневник</string>
+    <string name="title_activity_audio">Аудиовыпуски</string>
+    <string name="title_activity_planner">Планировщик</string>
+    <string name="title_activity_measurements">Замерки</string>
+    <string name="title_activity_communication">Общение</string>
+    <string name="title_activity_exercises">Упражнения</string>
+    <string name="title_activity_exercises_activity_ex">ExercisesActivityEx</string>
+
+</resources>

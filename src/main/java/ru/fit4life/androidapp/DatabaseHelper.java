@@ -92,7 +92,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public synchronized void close() {
-
         if(myDB != null)
             myDB.close();
 
@@ -102,29 +101,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getBodyParts () {
         String query = "SELECT * FROM BodyParts ORDER BY name";
-        this.getReadableDatabase();
 
-        Cursor c = myDB.rawQuery(query, null);
-        if (c != null)
-            c.moveToFirst();
-
-        return c;
+        return this.getCursorBySqlString(query);
     }
 
     public Cursor getExercises () {
         String query = "SELECT * FROM exercises ORDER BY name";
-        this.getReadableDatabase();
 
-        Cursor c = myDB.rawQuery(query, null);
-        if (c != null)
-            c.moveToFirst();
-
-        return c;
+        return this.getCursorBySqlString(query);
     }
 
     public Cursor getExercisesByBodyPartId (int id) {
         String query = "SELECT e.* FROM exercisebybodyparts as b INNER JOIN exercises as e ON e._id = b.exerciseid WHERE b.bodypartid = " + id + " ORDER BY e.name";
-        this.getReadableDatabase();
+
+        return this.getCursorBySqlString(query);
+    }
+
+    private Cursor getCursorBySqlString(String query) {
+
+        if (!myDB.isOpen())
+            this.getReadableDatabase();
 
         Cursor c = myDB.rawQuery(query, null);
         if (c != null)

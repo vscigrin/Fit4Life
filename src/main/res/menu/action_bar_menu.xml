@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/action_bar_label"
+            android:icon="@android:drawable/ic_menu_search"
+            android:showAsAction="always"
+            android:title="Имя">
+    </item>
+
+    <item
+            android:id="@+id/action_bar_search"
+            android:icon="@android:drawable/ic_menu_search"
+            android:showAsAction="always"
+            android:title="Поиск">
+    </item>
+    <item
+            android:id="@+id/action_bar_add"
+            android:icon="@android:drawable/ic_menu_add"
+            android:showAsAction="ifRoom"
+            android:title="Добавить">
+    </item>
+</menu>
